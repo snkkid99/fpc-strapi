@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "produits",
+  "info": {
+    "name": "Produit",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ref": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "DescriptionCourte": {
+      "type": "text"
+    },
+    "DescriptionLongue": {
+      "type": "richtext"
+    },
+    "famille_produit": {
+      "model": "famille-produit",
+      "via": "produits"
+    }
+  }
+}

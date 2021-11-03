@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "famille_produits",
+  "info": {
+    "name": "FamilleProduit"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CodeFamille": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "NomFamille": {
+      "type": "text",
+      "required": true
+    },
+    "produits": {
+      "via": "famille_produit",
+      "collection": "produit"
+    }
+  }
+}
